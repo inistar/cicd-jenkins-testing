@@ -49,8 +49,8 @@ pipeline {
     //     }
      stage('TF Plan') {
        steps {
-           sh 'terraform init'
-           sh 'terraform plan -out myplan'
+           sh '/usr/local/bin/terraform init'
+           sh '/usr/local/bin/terraform plan -out myplan'
        }
      }
 
