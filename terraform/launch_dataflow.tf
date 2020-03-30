@@ -5,6 +5,13 @@ provider "google" {
   region      = "us-central1"
 }
 
+terraform {
+  backend "gcs" {
+    bucket = "myspringml-ini-tfstate"
+    credentials = "/Users/inis/KEYS/myspringml2-a36f8d343840.json"
+  }
+}
+
 resource "google_dataflow_job" "big_data_job" {
   name              = "terraform-trigger"
   template_gcs_path = "gs://jdbc-testing/GenerateSequenceToGCS/template"
