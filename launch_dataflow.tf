@@ -13,7 +13,7 @@ terraform {
 }
 
 resource "google_dataflow_job" "big_data_job" {
-  name              = "terraform--jenkins-trigger"
+  name              = "terraform--jenkins-trigger-1"
   template_gcs_path = "gs://jdbc-testing/GenerateSequenceToGCS/template"
   temp_gcs_location = "gs://jdbc-testing/GenerateSequenceToGCS/tmp_dir"
   zone              = "us-central1-a"
