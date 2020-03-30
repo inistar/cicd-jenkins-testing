@@ -60,6 +60,11 @@ pipeline {
         }
       }
     }
+    stage('TF Apply') {
+       steps {
+           sh '/usr/local/bin/terraform apply'
+       }
+     }
 
    }
 }
